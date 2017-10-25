@@ -1,8 +1,10 @@
 package server
 
 import (
+	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,6 +21,7 @@ func Router(h *Handlers) {
 	//server.GET("/request", h.GetRequest)
 	//server.POST("/request", h.PostRequest)
 
-	log.Printf("Server listening on port 8080")
-	server.Run(":8080")
+	port := os.Getenv("PORT")
+	log.Printf("Server listening on port %s", port)
+	server.Run(fmt.Sprintf(":%s", port))
 }
