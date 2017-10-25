@@ -19,7 +19,7 @@ func Router(h *Handlers) {
 	server.GET("/status", h.GetStatus)
 	//server.POST("/status", h.PostStatus)
 	//server.GET("/request", h.GetRequest)
-	//server.POST("/request", h.PostRequest)
+	server.POST("/request", h.PostRequest)
 
 	port := os.Getenv("PORT")
 	log.Printf("Server listening on port %s", port)
