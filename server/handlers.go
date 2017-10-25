@@ -4,11 +4,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type Handlers struct{}
+type Handlers struct{
+	Status Status
+}
 
 func (h *Handlers) GetStatus(ctx *gin.Context) {
-	Success(ctx, gin.H{
-		"status": 200,
-	})
-	// Get Status
+	Success(ctx, h.Status)
 }
