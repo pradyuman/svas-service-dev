@@ -28,4 +28,5 @@ type Status struct {
 	EngineRunning      bool `json:"engineRunning"`
 	BluetoothConnected bool `json:"bluetoothConnected"`
 	CarStarted         bool `json:"carStarted"`
+	AuxInput           bool `json:"auxInput"`
 }
