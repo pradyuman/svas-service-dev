@@ -13,15 +13,19 @@ type Status struct {
 	HornOn             bool `json:"hornOn"`
 	HornStrobe         bool `json:"hornStrobe"`
 	McACOn             bool `json:"mcACOn"`
-	CarACOn            bool `json:"carACOn"`
 	McFanOn            bool `json:"mcFanOn"`
-	CarFanOn           bool `json:"carFanOn"`
 	McAccessoryOn      bool `json:"mcAccessoryOn"`
 	CarAccessoryOn     bool `json:"carAccessoryOn"`
 	McIG1On            bool `json:"mcIG1On"`
 	CarIG1On           bool `json:"carIG1On"`
 	McIG2On            bool `json:"mcIG2On"`
 	CarIG2On           bool `json:"carIG2On"`
+	BrakeSwitch        bool `json:"brakeSwitch"`
+	ClutchSwitch       bool `json:"clutchSwitch"`
+	ParkingBrake       bool `json:"parkingBrake"`
+	InReverse          bool `json:"inReverse"`
+	InNeutral          bool `json:"inNeutral"`
 	EngineRunning      bool `json:"engineRunning"`
 	BluetoothConnected bool `json:"bluetoothConnected"`
+	CarStarted         bool `json:"carStarted"`
 }
